@@ -67,6 +67,7 @@
     "stylelint-scss": "^6.10.0"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.1",
     "normalize-scss": "^8.0.0",
     "sass-mq": "^5.0.1"
   }
