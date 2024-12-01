@@ -1,0 +1,171 @@
+@use "sass:color";
+
+@import "../../../../node_modules/sass-mq/mq";
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin event-list {
+  @include reset-list;
+  box-sizing: border-box;
+
+  li {
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 4px;
+    background: color.adjust($secondary, $lightness: 20%);
+    line-height: 1.2;
+    width: 300px;
+    float: left;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+}
+
+%event-title {
+  color: color.adjust($ternary, $lightness: -20%);
+}
+
+@function scale-func($size, $amount: 1) {
+  @return $size * $amount;
+}
+
+.cover {
+  font-size: 1.1rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+    url("../images/5352508316_8a8fc1706e_o.png");
+  // background: url("../images/5352508316_8a8fc1706e_o.png") no-repeat !important;
+  background-size: cover;
+  background-position: center;
+  font-family: Avenir, Helvetica, georgia, serif;
+
+  &__event-title {
+    @extend %event-title;
+    $font-size: 0.9em;
+
+    &--up {
+      @extend %event-title;
+      font-size: scale-func($font-size, 1.3);
+    }
+
+    &--bottom {
+      @extend %event-title;
+      font-size: scale-func($font-size);
+    }
+  }
+
+  ul {
+    @include event-list;
+  }
+
+  p {
+    font-size: 0.8em;
+    color: $primary;
+  }
+
+  @supports (display:grid) {
+    li {
+      float: none !important;
+      height: auto !important;
+      width: auto !important;
+      margin: 0 !important;
+    }
+
+    ul {
+      display: grid;
+      gap: 10px;
+    }
+
+    @include mq($from: tablet) {
+      &__event-title {
+        $font-size: 0.8em;
+
+        &--up {
+          font-size: scale-func($font-size, 1.5);
+        }
+
+        &--bottom {
+          font-size: scale-func($font-size);
+        }
+      }
+
+      ul {
+        grid-template-rows: repeat(5, auto-fill);
+        grid-template-columns: repeat(3, auto);
+      }
+
+      li:nth-child(1) {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      li:nth-child(2) {
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+      }
+
+      li:nth-child(3) {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+      }
+
+      li:nth-child(4) {
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+      }
+
+      li:nth-child(5) {
+        grid-row: 2 / 3;
+        grid-column: 4 / 5;
+      }
+
+      li:nth-child(6) {
+        grid-row: 3 / 4;
+        grid-column: 1 / 2;
+      }
+
+      li:nth-child(7) {
+        grid-row: 3 / 4;
+        grid-column: 3 / 4;
+      }
+
+      li:nth-child(8) {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+      }
+
+      li:nth-child(9) {
+        grid-row: 4 / 5;
+        grid-column: 4 / 5;
+      }
+
+      li:nth-child(10) {
+        grid-row: 5 / 6;
+        grid-column: 1 / 2;
+      }
+
+      li:nth-child(11) {
+        grid-row: 5 / 6;
+        grid-column: 3 / 4;
+      }
+    }
+
+    @include mq($from: desktop) {
+      &__event-title {
+        $font-size: 1em;
+
+        &--up {
+          font-size: scale-func($font-size, 1.6);
+        }
+
+        &--bottom {
+          font-size: scale-func($font-size);
+        }
+      }
+    }
+
+  }
+}

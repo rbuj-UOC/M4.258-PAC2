@@ -1,0 +1,11 @@
+.post-blockquote p::before {
+  content: "\201C";
+}
+
+.post-blockquote p::after {
+  content: "\201D";
+}
+
+.post-blockquote + p {
+  text-align: right;
+}

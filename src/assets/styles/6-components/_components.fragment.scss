@@ -1,0 +1,21 @@
+.fragment-container {
+  container: fragment / inline-size;
+}
+
+.fragment {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+
+  @container fragment (inline-size > 500px) {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  &__sentence {
+    font-size: 1.8rem;
+  }
+}
+
+.fragment--single {
+  font-size: 1.8rem;
+}

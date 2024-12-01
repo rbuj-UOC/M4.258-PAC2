@@ -1,0 +1,10 @@
+@use "sass:color";
+
+a:is(:link, :visited) {
+  color: $ternary;
+}
+
+/* mouse over link */
+a:is(:hover, :active) {
+  color: color.adjust($ternary, $lightness: -30%);
+}

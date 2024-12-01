@@ -1,4 +1,4 @@
 {
-  "**/*.{html}": ["eslint"],
-  "**/*.{scss}": ["stylelint"]
+  "**/*.html": ["eslint"],
+  "**/*.scss": ["stylelint"]
 }
