@@ -1,29 +1,9 @@
-// SETTINGS
-@import "./1-settings/settings.global";
-
-
-// TOOLS
-@import "./2-tools/tools.clearfix";
-@import "./2-tools/tools.mq";
-
-
-// GENERIC
-@import "./3-generic/generic.box-sizing";
-@import "./3-generic/generic.normalize";
-
-
-// ELEMENTS
-@import "./4-elements/elements.body";
-@import "./4-elements/elements.footer";
-
-
-// OBJECTS
-
-
-// COMPONENTS
-@import "./6-components/components.uoc-container";
-
-// UTILITIES
-@import "./7-utilities/utilities.clearfix";
+@import "./1-settings";
+@import "./2-tools";
+@import "./3-generic";
+@import "./4-elements";
+//@import "./5-objects";
+@import "./6-components";
+@import "./7-utilities";
 
 @import "bootstrap/scss/bootstrap";
