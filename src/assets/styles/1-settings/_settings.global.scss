@@ -35,3 +35,8 @@ $mq-static-breakpoint: desktop;
 // right corner of your site during development, add the breakpoints
 // to this list, ordered by width. For example: (mobile, tablet, desktop).
 $mq-show-breakpoints: (mobile, tablet, desktop);
+
+
+$theme-colors: (
+  "primary": #bada55 
+);
