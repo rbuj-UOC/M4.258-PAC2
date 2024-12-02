@@ -16,13 +16,18 @@ import * as bootstrap from 'bootstrap';
   console.log(`Hello, ${university}!`);
 } )();
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  const links = document.querySelectorAll('.nav-link');
+function activateNavLink(id) {
+  let container = document.querySelector(id);
+  let links = container.querySelectorAll('.nav-link');
   links.forEach((link) => {
-    if (link.href === window.location.href) {
+    if (link.href === window.location.href)
       link.classList.add("active");
-    } else {
+    else
       link.classList.remove('active');
-    }
   });
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  activateNavLink('#header-navbar');
+  activateNavLink('#footer-navbar');
 });
