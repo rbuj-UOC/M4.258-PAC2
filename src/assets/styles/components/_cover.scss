@@ -20,12 +20,19 @@
   background-position: center;
   font-family: Avenir, Helvetica, georgia, serif;
 
+  &__event-container {
+    container: event / inline-size;
+  }
+
   &__event-title {
     $font-size: 0.9em;
 
     &--up {
       @extend %event-title;
-      font-size: scale-func($font-size, 1.3);
+      font-size: 1.5rem;
+      @container event (inline-size > 250px) {
+        font-size: max(1.5em, 1.23em + 2cqi);
+      }
     }
 
     &--bottom {
@@ -57,18 +64,6 @@
     }
 
     @include mq($from: tablet) {
-      &__event-title {
-        $font-size: 0.8em;
-
-        &--up {
-          font-size: scale-func($font-size, 1.5);
-        }
-
-        &--bottom {
-          font-size: scale-func($font-size);
-        }
-      }
-
       ul {
         grid-template-rows: repeat(5, auto-fill);
         grid-template-columns: repeat(3, auto);
@@ -129,20 +124,5 @@
         grid-column: 3 / 4;
       }
     }
-
-    @include mq($from: desktop) {
-      &__event-title {
-        $font-size: 1em;
-
-        &--up {
-          font-size: scale-func($font-size, 1.6);
-        }
-
-        &--bottom {
-          font-size: scale-func($font-size);
-        }
-      }
-    }
-
   }
 }
