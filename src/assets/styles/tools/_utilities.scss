@@ -1,0 +1,10 @@
+@use "/src/assets/styles/settings/breakpoints";
+@use "npm:sass-mq/mq" with (
+  $breakpoints: (
+    mobile: breakpoints.$mobile,
+    tablet: breakpoints.$tablet,
+    desktop: breakpoints.$desktop,
+    wide: breakpoints.$wide,
+  ),
+  $show-breakpoints: (mobile, tablet, desktop, wide)
+);

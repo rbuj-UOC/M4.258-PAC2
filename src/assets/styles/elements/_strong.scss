@@ -1,0 +1,8 @@
+@use "sass:color";
+@use "/src/assets/styles/settings/colors";
+
+strong {
+  color: color.adjust(colors.$secondary, $lightness: -10%);
+  font-weight: normal;
+  font-style: italic;
+}

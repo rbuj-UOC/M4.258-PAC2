@@ -1,0 +1,20 @@
+@use "/src/assets/styles/settings/colors";
+@use "/src/assets/styles/settings/breakpoints";
+
+/* theme colors */
+$primary: colors.$primary;
+$secondary: colors.$secondary;
+$danger: colors.$ternary;
+$light: colors.$quaternary;
+
+/* breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: breakpoints.$tablet,
+  lg: breakpoints.$desktop,
+  xl: breakpoints.$wide,
+  xxl: 1400px
+);
+
+@import "npm:bootstrap/scss/bootstrap";

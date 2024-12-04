@@ -1,0 +1,11 @@
+@use "sass:color";
+@use "/src/assets/styles/settings/colors";
+
+.nav-link {
+  color: color.adjust(colors.$primary, $lightness: 10%);
+
+  &:is(.active, :hover, :focus) {
+    color: color.adjust(colors.$ternary, $lightness: -10%);
+  }
+
+}

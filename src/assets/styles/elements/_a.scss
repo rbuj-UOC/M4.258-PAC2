@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "/src/assets/styles/settings/colors";
+
+a {
+  &:is(:link, :visited) {
+    color: colors.$ternary;
+  }
+
+  &:is(:hover, :active) {
+    color: color.adjust(colors.$ternary, $lightness: -30%);
+  }
+}

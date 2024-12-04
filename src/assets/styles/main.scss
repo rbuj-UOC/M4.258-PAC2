@@ -1,13 +1,11 @@
-@import "./1-settings";
-@import "./2-tools";
-@import "./3-generic";
-@import "./4-elements";
-//@import "./5-objects";
-@import "./6-components";
-@import "./7-utilities";
+/* cascading order */
+@layer settings, bootstrap, tools, reset, default, components, trumps;
 
-@import "bootstrap/scss/bootstrap";
-
-// Merge the maps
-/* stylelint-disable-next-line scss/no-global-function-names */
-$theme-colors: map-merge($theme-colors, $custom-colors);
+@import "/src/assets/styles/settings" layer(settings);
+@import "/src/assets/styles/bootstrap" layer(bootstrap);
+@import "/src/assets/styles/tools" layer(tools);
+@import "/src/assets/styles/generic" layer(reset);
+@import "/src/assets/styles/elements" layer(default);
+// @import "/src/assets/styles/objects";
+@import "/src/assets/styles/components" layer(components);
+// @import "/src/assets/styles/trumps";

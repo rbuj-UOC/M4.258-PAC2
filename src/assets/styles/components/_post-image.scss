@@ -1,0 +1,17 @@
+@use "/src/assets/styles/tools/mixins";
+
+.post-image-container {
+  container: post-image / inline-size;
+}
+
+.post-image--top {
+  @include mixins.post-image($y: 0%);
+}
+
+.post-image--center {
+  @include mixins.post-image($y: 50%);
+}
+
+.post-image--bottom {
+  @include mixins.post-image($y: 100%);
+}

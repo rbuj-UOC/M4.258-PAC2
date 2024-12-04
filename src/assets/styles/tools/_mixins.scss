@@ -1,0 +1,33 @@
+@use "sass:color";
+@use "/src/assets/styles/settings/colors";
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin event-list {
+  @include reset-list;
+  box-sizing: border-box;
+
+  li {
+    list-style-type: none;
+    padding: 10px;
+    border-radius: 4px;
+    background: color.adjust(colors.$secondary, $lightness: 20%);
+    line-height: 1.2;
+    width: 300px;
+    float: left;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+}
+
+@mixin post-image($x: 50%, $y: 50%) {
+  align-items: center;
+  height: 530px;
+  width: 100%;
+  object-fit: cover;
+  object-position: $x $y;
+}
