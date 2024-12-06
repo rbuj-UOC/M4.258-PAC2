@@ -1,0 +1,13 @@
+.form-container {
+  container: cntct-form / inline-size;
+}
+
+.contact-form {
+  max-width: 820px;
+  :where(label, button) {
+    font-size: small;
+    @container cntct-form (inline-size > 450px) {
+      font-size: medium;
+    }
+  }
+}
