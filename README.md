@@ -1,3 +1,4 @@
+[![Node.js CI](https://github.com/rbuj-UOC/M4.258-PAC2/actions/workflows/node.js.yml/badge.svg)](https://github.com/rbuj-UOC/M4.258-PAC2/actions/workflows/node.js.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/819363a6-0052-447d-9276-5b126ba25d25/deploy-status)](https://app.netlify.com/sites/magenta-profiterole-7d625c/deploys)
 
 # UOC Boilerplate
