@@ -6,7 +6,7 @@
   "scripts": {
     "parcel:serve": "NODE_ENV=development parcel -p 8123 --target web --open",
     "parcel:build": "NODE_ENV=production parcel build --target web --no-source-maps --no-cache",
-    "parcel:deploy": "NODE_ENV=production parcel build --target web --no-source-maps --no-cache --public-url /M4.258-PAC2/",
+    "parcel:deploy": "NODE_ENV=production parcel build --target web --no-source-maps --no-cache --public-url /M4.258-PAC2/ --no-optimize",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean parcel:build",
